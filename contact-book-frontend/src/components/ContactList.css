@@ -1,0 +1,214 @@
+ 
+.contact-list-page {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #395574;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.search-bar {
+  width: 250px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-bar::placeholder {
+  color: #7d8076;
+}
+
+.add-contact-nav-button {
+  background-color: rgb(255, 255, 255);
+  color: #7a8771;
+  border: none;
+  padding: 8px 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-contact-nav-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Container for the contact cards */
+.contact-list-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.no-contacts {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+}
+
+/* Contact card styling */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.contact-card {
+  background-color: rgb(108, 236, 213);
+  border: 1px solid #734646;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card.selected {
+  border: 2px solid #007bff;
+}
+
+/* Contact name styling */
+.contact-card-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Contact details section */
+.contact-card-details {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.contact-card-details p {
+  margin: 5px 0;
+}
+
+/* Buttons for Edit and Delete */
+.contact-card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.edit-contact-button,
+.delete-contact-button {
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.edit-contact-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.edit-contact-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-contact-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-contact-button:hover {
+  background-color: #a71d2a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+}
+
+
+
+/* Modal styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  margin: 10px 0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.close-modal-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.close-modal-button:hover {
+  background-color: #5a6268;
+}
