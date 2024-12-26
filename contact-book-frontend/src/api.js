@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/contacts';
+const API_URL = 'https://contact-book-backend-o5ld.onrender.com';
 
 export const getContacts = async () => {
   try {
